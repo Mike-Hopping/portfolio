@@ -1,0 +1,333 @@
+// Page header
+.front-hero {
+    background: url('http://michael.hopping.wux.yoobee.net.nz/portfolio/wp-content/uploads/2018/06/takeawalk9.jpg') bottom center;
+    background-size: cover;
+    background-position: bottom;
+    .marketing {
+      @include xy-grid-container(55rem);
+      @include xy-grid;
+    }
+  
+    .front-hero h1{
+        font-family: 'Montserrat', sans-serif;
+      }
+
+    .marketing h1, h4{
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+    @include breakpoint(small) {
+      background: url('http://michael.hopping.wux.yoobee.net.nz/portfolio/wp-content/uploads/2018/06/takeawalk9.jpg') bottom center;
+      background-size: cover;
+      background-position: bottom;
+      padding: rem-calc(65%) 0;
+      margin: 0 0 rem-calc(32);
+      height: auto;
+      position: relative;
+      text-align: left;
+    }
+  
+    @include breakpoint(medium) {
+      background: url('http://michael.hopping.wux.yoobee.net.nz/portfolio/wp-content/uploads/2018/06/takeawalk9.jpg') bottom center;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    //   margin: 0 0 rem-calc(72);
+    }
+  
+    .watch {
+      @include breakpoint(small) {
+        @include xy-cell(7);
+      }
+  
+      @include breakpoint(medium) {
+        @include xy-cell(12);
+      }
+  
+      a {
+        color: #B4C9D1;
+        cursor: pointer;
+        font-weight: 400;
+        margin-right: rem-calc(20);
+      }
+  
+      a:hover {
+        color: #fff;
+      }
+    }
+  
+    .tagline {
+        border: 1px solid;
+        border-color: orange;
+      @include breakpoint(small) {
+        // @include xy-cell(8);
+      }
+  
+      @include breakpoint(medium) {
+        // @include xy-cell(5);
+        margin: 0 auto;
+        margin-top: 6rem;
+      }
+
+      @include breakpoint(xxlarge) {
+        margin-top: 15em;
+      }
+    }
+  
+    .tagline h1{
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .tagline h4{
+        padding-left: 6em;
+        padding-right: 6em;
+        padding-bottom: 2.5em;
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: 500;
+  
+      @include breakpoint(small) {
+        font-size: 1.2rem;
+      }
+  
+      @include breakpoint(medium) {
+        font-size: 1.875rem;
+      }
+
+      @include breakpoint(xxlarge) {
+        font-size: 2.875rem;
+      }
+    }
+  
+    h4 {
+      color: #fff;
+      font-weight: 300;
+      font-size: 0.7rem;
+
+      @include breakpoint(xxlarge) {
+        font-size: 1.2rem;
+      }
+    }
+  
+    .download {
+      margin-top: rem-calc(20);
+    }
+  }
+  
+  // Intro
+  .intro {
+    @include xy-grid-container;
+    @include xy-grid;
+  
+    .fp-intro {
+      @include breakpoint(small) {
+        @include xy-cell(12);
+      }
+  
+      @include breakpoint(medium) {
+        @include xy-cell(10);
+        @include xy-cell-offset(1);
+  
+        h2 {
+          font-weight: 300;
+          margin-bottom: 1.5rem;
+        }
+  
+        h4 {
+          font-size: 1.125rem;
+          line-height: 1.6;
+          color: #777;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  
+  // Section divider
+  .section-divider {
+    @include xy-grid-container;
+    @include xy-grid;
+  
+    hr {
+      @include xy-cell(12);
+      @extend .dotted;
+      box-sizing: border-box;
+    }
+  }
+  
+  // Home intro section
+  .home-intro {
+    @include xy-grid-container;
+    @include xy-grid;
+    text-align: center;
+  
+    header {
+      @include xy-cell(12);
+  
+      h2 {
+        font-weight: 300;
+        margin-bottom: 100px;
+        font-family: 'Lato', sans-serif;
+      }
+  
+      h4 {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #777;
+      }
+    }
+  
+    .semantic,
+    .responsive,
+    .customizable,
+    .professional {
+      @include breakpoint(small) {
+        @include xy-cell(12);
+      }
+  
+      @include breakpoint(medium) {
+        @include xy-cell(3);
+      }
+  
+      img {
+        padding: 1.25rem;
+        margin: 1rem auto 0 auto;
+      }
+  
+      h3 {
+        color: #0a0a0a;
+        font-weight: 300;
+        font-size: 1.75rem;
+      }
+  
+      p {
+        font-size: 0.9375rem;
+      }
+    }
+  
+    .why-foundation {
+      @include xy-cell(12);
+      margin-top: 4rem;
+    }
+  }
+  
+  .main-grid .main-content{
+      width: 100%;
+  }
+  .main-content{
+    background-color: #ffffff;
+    padding: 50px;
+    font-family: 'Lato', sans-serif;
+  }
+  @media only screen and (max-width: 640px){
+    .main-content{
+    padding: 0;
+  }
+}
+  @media only screen and (max-width: 640px){
+    .main-grid .main-content{
+    margin: 0;
+  }
+}
+  .main-grid .sidebar{
+    background-color: #ffffff;
+    padding: 50px;
+    margin-top: 0;
+  }
+
+  .home-about{
+    margin-bottom: 100px;
+  }
+
+  .home-my-work {
+    @include xy-grid-container;
+    @include xy-grid;
+    text-align: center;
+    height: auto;
+
+    header {
+        @include xy-cell(12);
+    
+        h2 {
+          font-weight: 300;
+          margin-bottom: 100px;
+        }
+    
+        h4 {
+          font-size: 1.125rem;
+          line-height: 1.6;
+          color: #777;
+        }
+    }
+}
+
+.artistsalliance{
+    background: url('http://michael.hopping.wux.yoobee.net.nz/portfolio/wp-content/uploads/2018/06/artistsalliance.jpg') bottom center;
+    background-size: cover;
+    width: 350px;
+    height: 200px;
+    margin-bottom: 100px;
+}
+@media only screen and (max-width: 640px){
+  .artistsalliance{
+  width: 300px;
+}
+}
+
+.project-txt{
+  width: 350px;
+}
+@media only screen and (max-width: 640px){
+  .project-txt{
+  width: 300px;
+}
+}
+.designhub{
+  background: url('http://michael.hopping.wux.yoobee.net.nz/portfolio/wp-content/uploads/2018/06/gd-homepage.png') bottom center;
+  background-size: cover;
+  width: 350px;
+  height: 200px;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 640px){
+  .designhub{
+  width: 300px;
+}
+}
+.climate{
+  background: url('http://michael.hopping.wux.yoobee.net.nz/portfolio/wp-content/uploads/2018/06/climate-group.png') bottom center;
+  background-size: cover;
+  width: 350px;
+  height: 250px;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 640px){
+  .climate{
+  width: 300px;
+}
+}
+.fabergio{
+  background: url('http://michael.hopping.wux.yoobee.net.nz/portfolio/wp-content/uploads/2018/06/fabergio2.png') bottom center;
+  background-size: cover;
+  width: 350px;
+  height: 200px;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 640px){
+  .fabergio{
+  width: 300px;
+}
+}
+.footer-container{
+  max-width: 100%;
+}
+
